@@ -1,0 +1,162 @@
+.header-container {
+    display: grid;
+    grid-template-columns: 2fr 81px 4fr;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.header-vertical-divider {
+    width: 1px;
+    height: 100%;
+    margin: 0 40px;
+    padding: 0;
+    border: 0;
+    background: #B5965A;
+}
+
+.header {
+    width: 100%;
+    min-height: 70px;
+    padding: 40px 0;
+    background-color: #021547;
+    color: #B5965A;
+}
+
+.header-personal_name {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.header-personal_position {
+    font-size: 20px;
+}
+
+.header .container {
+    display: flex;
+}
+
+.header-personal {
+    text-align: right;
+}
+
+.header-contacts {
+    display: grid;
+    grid-template-columns: 1fr 68px;
+    grid-auto-rows: 24px;
+    padding: 8px 0 ;
+    border-left: 0;
+}
+
+.header-contacts .letter_text {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+
+.header-contacts .languages {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.header-contacts .letter_email {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 10;
+    grid-row-end: 10;
+    align-self: center;
+}
+
+.header-contacts .socials {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 10;
+    align-self: center;
+}
+
+.header-contacts .socials .social_button {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.header-contacts .languages .active {
+    opacity: .8;
+}
+
+.header-contacts .languages button {
+    padding: 0;
+    border: 0;
+    background: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #B5965A;
+    cursor: pointer;
+}
+
+@media (max-width: 990px) { 
+    .header-container {
+        grid-template-columns: 2fr 49px 4fr;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+
+    .header-vertical-divider {
+        margin: 0 24px;
+    }
+
+    .header {
+        min-height: 42px;
+        padding: 24px 0;
+    }
+
+    .header-contacts {
+        grid-template-columns: 85px 1fr 68px;
+    }
+
+    .header-personal_name {
+        font-size: 20px;
+    }
+
+    .header-personal_position {
+        font-size: 16px;
+    }
+
+    .header-contacts .letter_text {
+        display: none;
+    }
+
+    .header-contacts .languages {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .header-contacts .letter_email {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        align-self: auto;
+    }
+
+    .header-contacts .socials {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        align-self: center;
+    }
+
+    .header-contacts .socials .social_button {
+        margin: 0 8px 0 0;
+    }
+}
