@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CV</title>
         <link href="./styles/index.css" rel="stylesheet" type="text/css"/>
         <link href="./styles/header.css" rel="stylesheet" type="text/css"/>
@@ -8,262 +9,166 @@
         <link href="./styles/footer.css" rel="stylesheet" type="text/css"/>
         <link href="./styles/sections.css" rel="stylesheet" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
-        <script src="./scripts/gallery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="./scripts/index.js"></script>
     </head>
-    <body>
-        <header class="header">
-            <section class="header-container">
-                <section class="header-personal">
-                    <h1 class="header-personal_name">olga yuzlikeeva</h1>
-                    <p class="header-personal_position">Frontend developer</p>
-                </section>
-                <div class="header-vertical-divider"></div>
-                <section class="header-contacts">
-                    <p class="letter_text">
-                        Hello,<br/><br/>
-                        s simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, 
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <p class="letter_email">
-                        yuzlikeeva.olga@gmail.com
-                    </p>
-                    <div class="languages">
-                        <button type="button" class="active">ru</button>
-                        <button type="button">en</button>
-                    </div>
-                    <div class="socials">
-                        <button class="social_button button-icon" type="button">
-                            <img src="./assets/svg/github.svg" alt="github"/>
-                        </button>
-                        <button class="social_button button-icon" type="button">
-                            <img src="./assets/svg/linkdin.svg" alt="linkdin"/>
-                        </button>
-                    </div>
-                </section>
-            </section>
-        </header>
-        <section class="info container">
-            <p class="info-title">Education</p>
-            <div class="education-container">
-                <div class="education-date">
-                    2021-2022
-                </div>
-                <div class="education-vertical-divider"></div>
-                <p class="education-title">Bachelor in Applied Mathematics and Informatics</p>
-                <p class="education-subtitle">
-                    Saratov State University,<br/>
-                    Faculty of Mechanics and Mathematics
-                </p>
-            </div>
-        </section>
-        <section class="info container">
-            <p class="info-title">Courses</p>
-            <div class="education-container">
-                <div class="education-date">
-                    2021
-                </div>
-                <div class="education-vertical-divider"></div>
-                <div class="description">
-                    <p class="education-title">Mentoring intensive</p>
-                    <p class="education-subtitle">
-                        verno & red_mad_robots
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="info container gallery" id="gallery-container">
-            <p class="info-title">Info & Skills</p>
-            <nav class="skills-nav">
-                <button id="skill-gallery_nav-item_0" class="skills-nav_item active" onclick="slideGalleryToSlide(0)">About me</button>
-                <button id="skill-gallery_nav-item_1" class="skills-nav_item" onclick="slideGalleryToSlide(1)">Hard skills</button>
-                <button id="skill-gallery_nav-item_2" class="skills-nav_item" onclick="slideGalleryToSlide(2)">Instruments</button>
-                <button id="skill-gallery_nav-item_3" class="skills-nav_item" onclick="slideGalleryToSlide(3)">Soft skills</button>
-            </nav>
-            <button id="gallery-arrow_left" class="button-icon gallery-arrow_left" type="button" onclick="slideGallery(-1)">
-                <img src="./assets/svg/arrow-gold.svg"/>
-            </button>
-            <button id="gallery-arrow_right" class="button-icon gallery-arrow_right active" type="button" onclick="slideGallery(1)">
-                <img src="./assets/svg/arrow-gold.svg"/>
-            </button>
-            <div class="skills-gallery-container" id="gallery">
-                <div class="skills-gallery">
-                    <div class="slide-container">
-                        <ul class="slide">
-                            <li><span class="skill-title">Occupation:</span> Kazahstan, Astana</li>
-                            <li><span class="skill-title">Willing to work:</span> remotely, any timezone</li>
-                            <li><span class="skill-title">Age:</span> 29</li>
-                            <li><span class="skill-title">English level:</span> B2</li>
-                            <li><span class="skill-title">Professional experience:</span> 5 years</li>
-                            <li><span class="skill-title">Salary expectations:</span> $30k per year</li>
-                        </ul>
-                    </div>
-                    <div class="slide-container">
-                        <ul class="slide">
-                            <li><span class="skill-title">Languages:</span> JavaScript, TypeScrapt, HTML</li>
-                            <li><span class="skill-title">FW & Libraries:</span> ReactJs, Angular, VueJs, NextJs</li>
-                            <li><span class="skill-title">Other:</span> react-router, react-router-dom, react-animations, Leaflet</li>
-                            <li><span class="skill-title">State managers:</span> MobX, Redux, Atom</li>
-                            <li><span class="skill-title">Working with forms:</span> Formik + yup</li>
-                            <li><span class="skill-title">Styles:</span> Sass, Styled-components, Stylus, CSS</li>
-                            <li><span class="skill-title">Working with images:</span> SVG-sprate, Canvas</li>
-                            <li><span class="skill-title">CI:</span> Git, Webpack, Gulp, </li>
-                            <li><span class="skill-title">Code quality:</span> Cross-browser, adaptive, responsive, accessibility<br/>  mark-up. Clean code, SOLID, code style</li>
-                            <li><span class="skill-title">Package managers:</span> npm, yarn</li>
-                        </ul>   
-                    </div>
-                    <div class="slide-container">
-                        <ul class="slide">
-                            <li><span class="skill-title">Occupation:</span> Kazahstan, Astana</li>
-                            <li><span class="skill-title">Willing to work:</span> remotely, any timezone</li>
-                            <li><span class="skill-title">Age:</span> 29</li>
-                            <li><span class="skill-title">English level:</span> B2</li>
-                            <li><span class="skill-title">Professional experience:</span> 5 years</li>
-                            <li><span class="skill-title">Salary expectations:</span> $30k per year</li>
-                        </ul>
-                    </div>
-                    <div class="slide-container">
-                        <ul class="slide">
-                            <li><span class="skill-title">Languages:</span> JavaScript, TypeScrapt, HTML</li>
-                            <li><span class="skill-title">FW & Libraries:</span> ReactJs, Angular, VueJs, NextJs</li>
-                            <li><span class="skill-title">Other:</span> react-router, react-router-dom, react-animations,<br/> Leaflet</li>
-                            <li><span class="skill-title">State managers:</span> MobX, Redux, Atom</li>
-                            <li><span class="skill-title">Working with forms:</span> Formik + yup</li>
-                            <li><span class="skill-title">Styles:</span> Sass, Styled-components, Stylus, CSS</li>
-                            <li><span class="skill-title">Working with images:</span> SVG-sprate, Canvas</li>
-                            <li><span class="skill-title">CI:</span> Git, Webpack, Gulp, </li>
-                            <li><span class="skill-title">Code quality:</span> Cross-browser, adaptive, responsive, accessibility  mark-up. Clean code, SOLID, code style</li>
-                            <li><span class="skill-title">Package managers:</span> npm, yarn</li>
-                        </ul>   
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="info container">
-            <p class="info-title">Experience</p>
-
-            <section class="position-container full">
-                <div class="position-title">
-                    <p>Frontend developer</p>
-                    <button class="position-toggle-button">
-                        <img src="./assets/svg/arrow.svg" class="svg-arrow"/>
-                    </button>
-                </div>
-                <p class="position-subtitle">Freelance & part-time job</p>
-                <p class="position-date">2021 – 2022</p>
-                <div class="position-vertical-divider"></div>
-                <div class="position-description">
-                    <ul>
-                        <li>разработка SSR веб-приложения NextJs</li>
-                        <li>разработка учебной платформы для студентов и преподавателей ReactJS + MobX + Sass</li>
-                        <li>разработка учебной платформы для студентов и преподавателей Angular + Sass</li>
-                        <li>рефакторинг и доработка приложения для путешественников ReactJS + Redux + Scss</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="position-container short">
-                <div class="position-title">
-                    <p>Middle Frontend developer</p>
-                    <button class="position-toggle-button">
-                        <img src="./assets/svg/arrow.svg" class="svg-arrow"/>
-                    </button>
-                </div>
-                <p class="position-subtitle">Technokratos</p>
-                <p class="position-date">2019 – 2023</p>
-                <div class="position-vertical-divider"></div>
-                <div class="position-description">
-                    <ul>
-                        <li>кроссбраузерная, адаптивная, резиновая верстка с использованием препроцессоров (sass, styled-components, stylus, css)</li>
-                        <li>разработка, рефакторинг, оптимизация web-приложений на TypeScript (ReactJs + MobX/Angular)</li>
-                        <li>разработка интерактивной карты с использованием Leaflet и Canvas</li>
-                        <li>работа с формами (ReactJs + Formik + Yup/Angular)</li>
-                        <li>создание и расширение библиотеки компонентов на (ReactJs)</li>
-                        <li>добавление мультиязычности в приложения</li>
-                        <li>работа с Webpack</li>
-                        <li>code review</li>
-                        <li>написание документации</li>
-                        <li>добавление мультиязычности в приложения</li>
-                        <li>менторинг и создание программы стажировки</li>
-                        <li>участие во внешних и внутренних митапах в качестве докладчика</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="position-container short">
-                <div class="position-title">
-                    <p>Teacher</p>
-                    <button class="position-toggle-button">
-                        <img src="./assets/svg/arrow.svg" class="svg-arrow"/>
-                    </button>
-                </div>
-                <p class="position-subtitle">Technokratos, it-courses Agona</p>
-                <p class="position-date">2021 – 2022</p>
-                <div class="position-vertical-divider"></div>
-                <div class="position-description">
-                    <ul>
-                        <li>подготовка учебного плана</li>
-                        <li>создание презентаций с теоретическим материалом и примерами кода</li>
-                        <li>подготовка практических задание к топикам</li>
-                        <li>code review студентов с обратной связью</li>
-                        <li>проведение практик и лекций в онлайн и оффлайн </li>
-                        <li>подготовка и проведение промежуточных тестирований и экзаменов</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="position-container short">
-                <div class="position-title">
-                    <p>Teacher</p>
-                    <button class="position-toggle-button">
-                        <img src="./assets/svg/arrow.svg" class="svg-arrow"/>
-                    </button>
-                </div>
-                <p class="position-subtitle">Technokratos, it-courses Agona</p>
-                <p class="position-date">2021 – 2022</p>
-                <div class="position-vertical-divider"></div>
-                <div class="position-description">
-                    <ul>
-                        <li>подготовка учебного плана</li>
-                        <li>создание презентаций с теоретическим материалом и примерами кода</li>
-                        <li>подготовка практических задание к топикам</li>
-                        <li>code review студентов с обратной связью</li>
-                        <li>проведение практик и лекций в онлайн и оффлайн </li>
-                        <li>подготовка и проведение промежуточных тестирований и экзаменов</li>
-                    </ul>
-                </div>
-            </section>
-        </section>
-        <footer class="footer">
-            <section class="footer-container">
-                <section class="footer-personal">
-                    <h1 class="footer-personal_name">olga yuzlikeeva</h1>
-                    <p class="footer-personal_position">Frontend developer</p>
-
-                    <div class="socials">
-                        <button class="button-icon social_button" type="button">
-                            <img src="./assets/svg/github.svg" alt="github"/>
-                        </button>
-                        <button class="button-icon social_button" type="button">
-                            <img src="./assets/svg/linkdin.svg" alt="linkdin"/>
-                        </button>
+    <body id="main-template-target">
+        <script id="main-template" type="text/x-handlebars-template">
+            <main>
+                <header class="header">
+                    <section class="header-container">
+                        <section class="header-personal">
+                            <h1 class="header-personal_name">{{greetingsData.name}}</h1>
+                            <div class="header-horizontal-divider"></div>
+                            <p class="header-personal_position">{{greetingsData.position}}</p>
+                        </section>
+                        <div class="header-vertical-divider"></div>
+                        <section class="header-contacts">
+                            <p class="letter_text">
+                                {{greetingsData.headerLetter.intro}}<br/><br/>
+                                {{greetingsData.headerLetter.body}}
+                            </p>
+                            <p class="letter_email">
+                                {{greetingsData.email}}
+                            </p>
+                            <div class="languages">
+                                <button type="button" onclick="changeLanguage('ru')">ru</button>
+                                <button type="button" class="active" onclick="changeLanguage('eng')">en</button>
+                            </div>
+                            <div class="socials">
+                                <button class="social_button button-icon email_icon" type="button">
+                                    <img src="./assets/svg/github.svg" alt="github"/>
+                                </button>
+                                <button class="social_button button-icon" type="button">
+                                    <img src="./assets/svg/github.svg" alt="github"/>
+                                </button>
+                                <button class="social_button button-icon" type="button">
+                                    <img src="./assets/svg/linkdin.svg" alt="linkdin"/>
+                                </button>
+                            </div>
+                        </section>
+                    </section>
+                </header>
+                <nav class="navigation">
+                    <a href="#education"><img src="./assets/svg/mortarboard.svg"/></a>
+                    <a href="#skills"><img src="./assets/svg/star.svg"/></a>
+                    <a href="#experience"><img src="./assets/svg/desktop.svg"/></a>
+                </nav>
+                <section id="education" class="info container">
+                    <p class="info-title">Education</p>
+                    <div id="education-template-target">
+                        {{#each educationData}}
+                            <div class="education-container">
+                                <div class="education-date">
+                                    {{date}}
+                                </div>
+                                <div class="education-vertical-divider"></div>
+                                <p class="education-title">{{title}}</p>
+                                <p class="education-subtitle">
+                                    {{subtitle}}
+                                </p>
+                            </div>
+                        {{/each}}
                     </div>
                 </section>
-                <div class="footer-vertical-divider"></div>
-                <section class="footer-contacts">
-                    <p class="letter_text">
-                        Hello, simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    </p>
-                    <p class="letter_email">
-                        yuzlikeeva.olga@gmail.com
-                    </p>
+                <section class="info container">
+                    <p class="info-title">Courses</p>
+                    <div id="courses-template-target">
+                        {{#each coursesData}}
+                            <div class="education-container">
+                                <div class="education-date">
+                                    {{date}}
+                                </div>
+                                <div class="education-vertical-divider"></div>
+                                <p class="education-title">{{title}}</p>
+                                <p class="education-subtitle">
+                                    {{subtitle}}
+                                </p>
+                            </div>
+                        {{/each}}
+                    </div>
                 </section>
-            </section>
-        </footer>
+                <section id="skills" class="info container gallery" id="gallery-container">
+                    <p class="info-title">Info & Skills</p>
+                    <nav class="skills-nav">
+                        <button id="skill-gallery_nav-item_0" class="skills-nav_item active" onclick="slideGalleryToSlide(0)">About me</button>
+                        <button id="skill-gallery_nav-item_1" class="skills-nav_item" onclick="slideGalleryToSlide(1)">Hard skills</button>
+                        <button id="skill-gallery_nav-item_2" class="skills-nav_item" onclick="slideGalleryToSlide(2)">Instruments</button>
+                        <button id="skill-gallery_nav-item_3" class="skills-nav_item" onclick="slideGalleryToSlide(3)">Soft skills</button>
+                    </nav>
+                    <button id="gallery-arrow_left" class="button-icon gallery-arrow_left" type="button" onclick="slideGallery(-1)">
+                        <img src="./assets/svg/arrow-gold.svg"/>
+                    </button>
+                    <button id="gallery-arrow_right" class="button-icon gallery-arrow_right active" type="button" onclick="slideGallery(1)">
+                        <img src="./assets/svg/arrow-gold.svg"/>
+                    </button>
+                    <div class="skills-gallery-container" id="gallery">
+                        <div class="skills-gallery">
+                            {{#each skillsData}}
+                                <div class="slide-container">
+                                    <ul class="slide">
+                                        {{#each this}}
+                                            <li>
+                                                <span class="skill-title">{{this.title}}:</span> 
+                                                {{this.description}}
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </section>
+                <section id="experience" class="info container">
+                    <p class="info-title">Experience</p>
+                    {{#each expirience}}
+                        <section class="position-container full">
+                            <div class="position-title">
+                                <p>{{position}}</p>
+                                <button class="position-toggle-button">
+                                    <img src="./assets/svg/arrow.svg" class="svg-arrow"/>
+                                </button>
+                            </div>
+                            <p class="position-subtitle">{{company}}</p>
+                            <p class="position-date">{{dates}}</p>
+                            <div class="position-vertical-divider"></div>
+                            <div class="position-description">
+                                <ul>
+                                    {{#each descriptions}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </section>
+                    {{/each}}
+                </section>
+                <footer class="footer">
+                    <section class="footer-container">
+                        <section class="footer-personal">
+                            <h1 class="footer-personal_name">{{greetingsData.name}}</h1>
+                            <p class="footer-personal_position">{{greetingsData.name}}</p>
+
+                            <div class="socials">
+                                <button class="button-icon social_button" type="button">
+                                    <img src="./assets/svg/github.svg" alt="github"/>
+                                </button>
+                                <button class="button-icon social_button" type="button">
+                                    <img src="./assets/svg/linkdin.svg" alt="linkdin"/>
+                                </button>
+                            </div>
+                        </section>
+                        <div class="footer-vertical-divider"></div>
+                        <section class="footer-contacts">
+                            <p class="letter_text">
+                                {{greetingsData.footerLetter}}
+                            </p>
+                            <p class="letter_email">
+                                {{greetingsData.email}}
+                            </p>
+                        </section>
+                    </section>
+                </footer>
+            </main>
+        </script>
     </body>
 </htmml>

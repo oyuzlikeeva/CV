@@ -112,3 +112,69 @@
         font-size: 14px;
     }
 }
+
+@media (max-width: 780px) { 
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+
+    .footer-personal {
+        grid-template-columns: 2fr 1fr 1fr;
+        text-align: left;
+    }
+
+    .footer-vertical-divider {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 100%;
+        height: 1px;
+        margin: 8px 0;
+    }
+
+    .footer {
+        min-height: 42px;
+        padding: 24px 0;
+    }
+
+    .footer-personal_name {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-size: 20px;
+    }
+
+    .footer-personal_position {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        font-size: 16px;
+    }
+
+    .footer-personal .socials {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .footer-contacts {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .footer-personal .socials .social_button {
+        margin: 0 8px 0 0;
+    }
+
+    .footer-contacts .letter_text {
+        font-size: 14px;
+    }
+}

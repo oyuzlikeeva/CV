@@ -237,6 +237,137 @@
         margin-left: 40px;
         text-align: left;
     }
+
+}
+
+@media (max-width: 780px) {
+    .position-container,
+    .education-container {
+        grid-template-columns: 1fr 49px 2fr;
+        max-width: 950px;
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .education-title {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-bottom: 8px;
+    }
+
+    .education-subtitle {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-bottom: 0;
+    }
+
+    .education-vertical-divider {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        height: 1px;
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    .education-date {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        text-align: left;
+    }
+
+    .position-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: left;
+    }
+
+    .position-subtitle {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-bottom: 0;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .position-date {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .position-vertical-divider {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        height: 1px;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .position-title,
+    .position-date {
+        font-weight: 500;
+        color: #021547;
+    }
+
+    .position-description {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .position-toggle-button {
+        display: block;
+        padding: 0;
+        border: 0;
+        background: none;
+    }
+
+    .full .position-description {
+        display: grid;
+    }
+    
+    .short .position-description {
+        display: none;
+    }
+
+    .full .position-toggle-button {
+        transform: rotate(180deg);
+        animation: 1s ease-out arrowToUp;
+    }
+    
+    .short .position-toggle-button {
+        transform: rotate(0deg);
+        animation: 1s ease-out  arrowToDown;
+    }
+
+    .info {
+        margin: 32px auto;
+    }
+
+    .info .info-title {
+        margin-left: 0;
+        text-align: center;
+    }
+
 }
 
 

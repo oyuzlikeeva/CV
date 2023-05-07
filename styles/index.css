@@ -38,3 +38,46 @@ ul {
     background: none;
     cursor: pointer;
 }
+
+.navigation {
+    position: fixed;
+    top: 42vh;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 2;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #1B43A9;
+    cursor: pointer;
+}
+
+.navigation a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+
+@media (max-width: 990px) {
+    .navigation {
+        top: 91px;
+        padding: 16px 8px;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .container {
+        width: 90%;
+        min-width: 340px;
+        margin: 32px auto;
+    }
+
+    .navigation {
+        top: 91px;
+        padding: 16px 8px;
+    }
+}
