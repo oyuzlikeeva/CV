@@ -1,3 +1,4 @@
+//todo: вытащить куда-нибудь
 const eng = {
     greetingsData: {
         name: 'olga yuzlikeeva',
@@ -509,6 +510,7 @@ window.onload = function() {
     }
 }
 
+//todo: не обновляется шаблон при смене языка
 function renderHandlebars (lang) {
     let language = lang.toLowerCase();
     let data = {};
@@ -574,6 +576,8 @@ const slideGallery = (step) => {
         galleryRightButton.classList.add('active');
     }
 }
+
+//todo: нехватает плавности
 window.addEventListener("load", (event) => {
     const btn = document.querySelectorAll('.position-toggle-button');
     const disc = document.querySelectorAll('.position-description');
