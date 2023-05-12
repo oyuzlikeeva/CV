@@ -574,3 +574,26 @@ const slideGallery = (step) => {
         galleryRightButton.classList.add('active');
     }
 }
+window.addEventListener("load", (event) => {
+    const btn = document.querySelectorAll('.position-toggle-button');
+    const disc = document.querySelectorAll('.position-description');
+
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', fun_open);
+
+        function fun_open(event) {
+            for (var i = 0; i < btn.length; i++) {
+                if (btn[i] == event.currentTarget) {
+                    btn[i].classList.toggle('close');
+                    btn[i].classList.toggle('open');
+                    disc[i].classList.toggle('open');
+                }
+            }
+        }
+
+    }
+});
+
+function handleDescription () {
+    console.log('here');
+}

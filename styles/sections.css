@@ -167,7 +167,8 @@
 
     .position-title {
         display: flex;
-        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
         grid-column-start: 3;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -206,6 +207,17 @@
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 4;
+        overflow: hidden;
+    }
+
+    .position-description.close {
+        height: 0;
+        animation: .3s ease-out closePositionDescription;
+    }
+
+    .position-description.open {
+        height: 100%;
+        animation: .3s ease-out openPositionDescription;
     }
 
     .position-toggle-button {
@@ -215,20 +227,12 @@
         background: none;
     }
 
-    .full .position-description {
-        display: grid;
-    }
-    
-    .short .position-description {
-        display: none;
-    }
-
-    .full .position-toggle-button {
+    .position-toggle-button.open{
         transform: rotate(180deg);
         animation: 1s ease-out arrowToUp;
     }
     
-    .short .position-toggle-button {
+    .position-toggle-button.close {
         transform: rotate(0deg);
         animation: 1s ease-out  arrowToDown;
     }
@@ -250,6 +254,7 @@
     }
 
     .education-title {
+        justify-content: space-between;
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 2;
@@ -356,7 +361,7 @@
     
     .short .position-toggle-button {
         transform: rotate(0deg);
-        animation: 1s ease-out  arrowToDown;
+        animation: 1s ease-out arrowToDown;
     }
 
     .info {
@@ -388,5 +393,25 @@
 
     to {
     transform: rotate(180deg);
+    }
+}
+
+@keyframes openPositionDescription {
+    from {
+        height: 0;
+    }
+  
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes closePositionDescription {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
     }
 }

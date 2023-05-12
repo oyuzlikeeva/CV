@@ -78,3 +78,20 @@
     font-weight: 500;
     color: #1B43A9;
 }
+
+@media (max-width: 780px) {
+
+    .skills-nav {
+        width: 100%;
+    }
+
+    .gallery .gallery-arrow_left,
+    .gallery .gallery-arrow_right {
+        display: none;
+    }
+
+    .slide li {
+        width: 90%;
+    }
+
+}
