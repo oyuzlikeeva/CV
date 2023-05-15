@@ -139,26 +139,6 @@ const eng = {
                 title: 'Occupation',
                 description: 'Kazahstan, Astana'
             },
-            {
-                title: 'Willing to work',
-                description: 'remotely, any timezone'
-            },
-            {
-                title: 'Age',
-                description: '29'
-            },
-            {
-                title: 'English level',
-                description: 'B2'
-            },
-            {
-                title: 'Professional experience',
-                description: '29'
-            },
-            {
-                title: 'Salary expectations',
-                description: '$30k per year'
-            },
         ],
     ],
     expirience: [
@@ -180,15 +160,15 @@ const eng = {
             descriptions: [
                 'кроссбраузерная, адаптивная, резиновая верстка с использованием препроцессоров (sass, styled-components, stylus, css)',
                 'разработка, рефакторинг, оптимизация web-приложений на TypeScript (ReactJs + MobX/Angular)',
-                'разработка интерактивной карты с использованием Leaflet и Canvas',
+                'interactive map development using Leaflet and Canvas',
                 'работа с формами (ReactJs + Formik + Yup/Angular)',
-                'создание и расширение библиотеки компонентов на (ReactJs)',
+                'developing of UI-kit (ReactJs)',
                 'добавление мультиязычности в приложения',
                 'работа с Webpack',
                 'code review',
                 'написание документации',
                 'добавление мультиязычности в приложения',
-                'менторинг и создание программы стажировки',
+                'mentoring and creating course about basic Frontend knowledge',
                 'участие во внешних и внутренних митапах в качестве докладчика'
             ]
         },
@@ -504,7 +484,6 @@ window.onload = function() {
     }
 }
 
-//todo: не обновляется шаблон при смене языка
 function renderHandlebars (lang) {
     let language = lang.toLowerCase();
     let data = {};
