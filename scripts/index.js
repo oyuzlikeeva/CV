@@ -1,4 +1,3 @@
-//todo: вытащить куда-нибудь
 const eng = {
     greetingsData: {
         name: 'olga yuzlikeeva',
@@ -7,18 +6,16 @@ const eng = {
         linkedin: '',
         github: '',
         headerLetter: {
-            intro: 'Hello,',
-            body: `simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of 
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-            software like Aldus PageMaker including versions of Lorem Ipsum.`
+            intro: 'Hi,',
+            body: `I'am working as Frontend developer since 2016. I like create a beautiful and user-friendly interfaces. 
+            All this time a heve been working with a different size of team and I think, good communication inside 
+            the team very impornant for stable and effective work progress. Sometime developer must have
+            good soft skills as well as hard skills. The posibbility to get new expirience and share it 
+            mean a lot for me. I already have expirience of mentoring and teaching and I love it. 
+            I belive in good work without endless calls and really long chains of email.`
         },
-        footerLetter: `Hello, simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+        footerLetter: `This landing was made with HTML/CSS/JS and Hendlebars. I made design in Figms. 
+        Please, write me massage in LinkdIn or email6 if you like my CV.`,
     },
     educationData: [
         {
@@ -38,7 +35,7 @@ const eng = {
         [
             {
                 title: 'Occupation',
-                description: 'Kazahstan, Astana'
+                description: 'Tbilisi, Georgia'
             },
             {
                 title: 'Willing to work',
@@ -170,10 +167,10 @@ const eng = {
             company: 'Freelance & part-time job',
             dates: '2021 – 2022',
             descriptions: [
-                'разработка SSR веб-приложения NextJs',
-                'разработка учебной платформы для студентов и преподавателей ReactJS + MobX + Sass',
-                'разработка учебной платформы для студентов и преподавателей Angular + Sass',
-                'рефакторинг и доработка приложения для путешественников ReactJS + Redux + Scss',
+                'develop SSR web-app by NextJs',
+                'develop school platform for students and teachers with ReactJS + MobX + Sass',
+                'develop school platform for students and teachers with Angular + Sass',
+                'refactoring and development SPA for trevelers with ReactJS + Redux + Scss',
             ]
         },
         {
@@ -260,17 +257,14 @@ const ru = {
         github: '',
         headerLetter: {
             intro: 'Привет,',
-            body: `simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of 
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-            software like Aldus PageMaker including versions of Lorem Ipsum.`
+            body: `я занимаюсь фронтендом с 2016 года. Все началось в 2015 году с книги с носорогом и самостоятельном 
+            изучении правил вертки. Мне нравится созвадать красивые и удобные интерфейсы. Для меня ценно получать новый опыт и
+            делиться им с другими. Я верю, что умение находить общий язык с командой и уметь разрешать конфликты 
+            не менее важно, чем быть хорошим специалистом. Я не люблю бесконечные или частые созвоны.`
         },
-        footerLetter: `Этот резюме-лендинг сделан на чистых HTML/CSS/JS с использованием шаблонизатора 
-        Hendlebars. Дизайн нарисован в Figma, его можно посмотреть тут. 
-        Если вам понравилось мое резюме, напишите мне на почту или в LinkedIn'е. Если нужно, резюме можно скачать.`,
+        footerLetter: `Этот резюме-лендинг сделан с помощью HTML/CSS/JS, с использованием шаблонизатора 
+        Hendlebars. Дизайн нарисован в Figma. 
+        Если вам понравилось мое резюме, напишите мне на почту или в LinkedIn'е.`,
     },
     educationData: [
         {
@@ -290,7 +284,7 @@ const ru = {
         [
             {
                 title: 'Место нахождения',
-                description: 'Казахстан, Астана'
+                description: 'Тбилиси, Грузия'
             },
             {
                 title: 'Предпочтительная форма работы',
@@ -533,7 +527,7 @@ function renderHandlebars (lang) {
 
 function changeLanguage (lang) {
     window.localStorage.setItem('lang', lang);
-    renderHandlebars(lang);
+    location.reload();
 }
 
 const sliderProps = {
@@ -597,7 +591,3 @@ window.addEventListener("load", (event) => {
 
     }
 });
-
-function handleDescription () {
-    console.log('here');
-}
